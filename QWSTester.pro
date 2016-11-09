@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui websockets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,6 +12,7 @@ TARGET = QWSTester
 TEMPLATE = app
 
 include(./QPathEdit/qpathedit.pri)
+include(./QtUtils/QUrlValidator/qurlvalidator.pri)
 
 SOURCES += main.cpp\
         mainwindow.cpp
