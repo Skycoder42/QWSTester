@@ -1,4 +1,6 @@
 #include "mainwindow.h"
+#include "servertab.h"
+#include "socketconnectiontab.h"
 #include "ui_mainwindow.h"
 
 #include <QMetaEnum>
@@ -17,4 +19,20 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
 	delete ui;
+}
+
+void MainWindow::on_connectButton_clicked()
+{
+	auto connectionTab = new SocketConnectionTab(ui->tabWidget);
+	ui->tabWidget->addTab(connectionTab,
+						  connectionTab->windowIcon(),
+						  connectionTab->windowTitle() + "___");
+}
+
+void MainWindow::on_createButton_clicked()
+{
+	auto serverTab = new ServerTab(ui->tabWidget);
+	ui->tabWidget->addTab(serverTab,
+						  serverTab->windowIcon(),
+						  serverTab->windowTitle() + "___");
 }

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="client.ico">icons/computer.ico</file>
+        <file alias="server.ico">icons/server.ico</file>
+    </qresource>
+</RCC>

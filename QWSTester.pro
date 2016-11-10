@@ -15,8 +15,17 @@ include(./QPathEdit/qpathedit.pri)
 include(./QtUtils/QUrlValidator/qurlvalidator.pri)
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    socketconnectiontab.cpp \
+    servertab.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    socketconnectiontab.h \
+    servertab.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    socketconnectiontab.ui \
+    servertab.ui
+
+RESOURCES += \
+    qwstester_res.qrc
