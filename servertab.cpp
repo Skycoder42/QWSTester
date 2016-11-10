@@ -2,7 +2,7 @@
 #include "ui_servertab.h"
 
 ServerTab::ServerTab(QWidget *parent) :
-	QWidget(parent),
+	QFrame(parent),
 	ui(new Ui::ServerTab)
 {
 	ui->setupUi(this);

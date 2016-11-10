@@ -2,7 +2,7 @@
 #include "ui_socketconnectiontab.h"
 
 SocketConnectionTab::SocketConnectionTab(QWidget *parent) :
-	QWidget(parent),
+	QFrame(parent),
 	ui(new Ui::SocketConnectionTab)
 {
 	ui->setupUi(this);

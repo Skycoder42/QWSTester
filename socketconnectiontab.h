@@ -1,13 +1,13 @@
 #ifndef SOCKETCONNECTIONTAB_H
 #define SOCKETCONNECTIONTAB_H
 
-#include <QWidget>
+#include <QFrame>
 
 namespace Ui {
 class SocketConnectionTab;
 }
 
-class SocketConnectionTab : public QWidget
+class SocketConnectionTab : public QFrame
 {
 	Q_OBJECT
 
