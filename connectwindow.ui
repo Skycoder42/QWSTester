@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>518</width>
-    <height>281</height>
+    <width>532</width>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,262 +20,318 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Connect to WebSocket-Server</string>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="urlLabel">
-         <property name="text">
-          <string>&amp;Url:</string>
-         </property>
-         <property name="buddy">
-          <cstring>urlLineEdit</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="urlLineEdit">
-         <property name="placeholderText">
-          <string>ws://example.com/ws_app</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="originLabel">
-         <property name="text">
-          <string>&amp;Origin:</string>
-         </property>
-         <property name="buddy">
-          <cstring>originLineEdit</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="originLineEdit">
-         <property name="placeholderText">
-          <string>example.com</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="versionLabel">
-         <property name="text">
-          <string>&amp;Version:</string>
-         </property>
-         <property name="buddy">
-          <cstring>versionComboBox</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="versionComboBox"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QCheckBox" name="proXyCheckBox">
-         <property name="text">
-          <string>Pro&amp;xy:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="proXyLineEdit">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QCheckBox" name="clientCertCheckBox">
-         <property name="text">
-          <string>Server &amp;Cert:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QPathEdit" name="clientCertPathEdit">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="mimeTypeFilters">
-          <stringlist>
-           <string>application/x-x509-ca-cert</string>
-           <string>application/x-pem-file</string>
-           <string>application/octet-stream</string>
-          </stringlist>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="connectButton">
-           <property name="text">
-            <string>Co&amp;nnect</string>
-           </property>
-           <property name="autoDefault">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+     </spacer>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="title">
-       <string>Create WebSocket-Server</string>
-      </property>
-      <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="nameLabel">
-         <property name="text">
-          <string>&amp;Name:</string>
-         </property>
-         <property name="buddy">
-          <cstring>nameLineEdit</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="nameLineEdit">
-         <property name="placeholderText">
-          <string>example.de</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="portLabel">
-         <property name="text">
-          <string>&amp;Port:</string>
-         </property>
-         <property name="buddy">
-          <cstring>portSpinBox</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="portSpinBox">
-         <property name="specialValueText">
-          <string>Random</string>
-         </property>
-         <property name="accelerated">
-          <bool>true</bool>
-         </property>
-         <property name="maximum">
-          <number>65535</number>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="localhostLabel">
-         <property name="text">
-          <string>&amp;Localhost:</string>
-         </property>
-         <property name="buddy">
-          <cstring>localhostCheckBox</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QCheckBox" name="localhostCheckBox"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="secureLabel">
-         <property name="text">
-          <string>&amp;Secure:</string>
-         </property>
-         <property name="buddy">
-          <cstring>secureCheckBox</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QCheckBox" name="secureCheckBox"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QCheckBox" name="serverCertCheckBox">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Server C&amp;ert:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QPathEdit" name="serverCertPathEdit">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="mimeTypeFilters">
-          <stringlist>
-           <string>application/x-pkcs12</string>
-           <string>application/octet-stream</string>
-          </stringlist>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="passwordLineEdit">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-         <property name="placeholderText">
-          <string>PKCS#12 Password</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="createButton">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Connect to WebSocket-Server</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="urlLabel">
            <property name="text">
-            <string>C&amp;reate</string>
+            <string>&amp;Url:</string>
            </property>
-           <property name="autoDefault">
+           <property name="buddy">
+            <cstring>urlLineEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="urlLineEdit">
+           <property name="placeholderText">
+            <string>ws://example.com/ws_app</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="originLabel">
+           <property name="text">
+            <string>&amp;Origin:</string>
+           </property>
+           <property name="buddy">
+            <cstring>originLineEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="originLineEdit">
+           <property name="placeholderText">
+            <string>example.com</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="versionLabel">
+           <property name="text">
+            <string>&amp;Version:</string>
+           </property>
+           <property name="buddy">
+            <cstring>versionComboBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="versionComboBox"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="proXyCheckBox">
+           <property name="text">
+            <string>Pro&amp;xy:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="proXyLineEdit">
+           <property name="enabled">
             <bool>false</bool>
            </property>
           </widget>
          </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="clientCertCheckBox">
+           <property name="text">
+            <string>Server &amp;Cert:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPathEdit" name="clientCertPathEdit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="mimeTypeFilters">
+            <stringlist>
+             <string>application/x-x509-ca-cert</string>
+             <string>application/x-pem-file</string>
+             <string>application/octet-stream</string>
+            </stringlist>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="connectButton">
+             <property name="text">
+              <string>Co&amp;nnect</string>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
         </layout>
-       </item>
-      </layout>
-     </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Create WebSocket-Server</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="nameLabel">
+           <property name="text">
+            <string>&amp;Name:</string>
+           </property>
+           <property name="buddy">
+            <cstring>nameLineEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="nameLineEdit">
+           <property name="placeholderText">
+            <string>example.de</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="portLabel">
+           <property name="text">
+            <string>&amp;Port:</string>
+           </property>
+           <property name="buddy">
+            <cstring>portSpinBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="portSpinBox">
+           <property name="specialValueText">
+            <string>Random</string>
+           </property>
+           <property name="accelerated">
+            <bool>true</bool>
+           </property>
+           <property name="maximum">
+            <number>65535</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="localhostLabel">
+           <property name="text">
+            <string>&amp;Localhost:</string>
+           </property>
+           <property name="buddy">
+            <cstring>localhostCheckBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QCheckBox" name="localhostCheckBox"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="secureLabel">
+           <property name="text">
+            <string>&amp;Secure:</string>
+           </property>
+           <property name="buddy">
+            <cstring>secureCheckBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QCheckBox" name="secureCheckBox"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="serverCertCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Server C&amp;ert:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPathEdit" name="serverCertPathEdit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="mimeTypeFilters">
+            <stringlist>
+             <string>application/x-pkcs12</string>
+             <string>application/octet-stream</string>
+            </stringlist>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="passwordLineEdit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="placeholderText">
+            <string>PKCS#12 Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="createButton">
+             <property name="text">
+              <string>C&amp;reate</string>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>
@@ -284,7 +340,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>518</width>
+     <width>532</width>
      <height>20</height>
     </rect>
    </property>
